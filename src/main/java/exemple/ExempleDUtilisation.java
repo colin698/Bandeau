@@ -6,7 +6,7 @@ import java.awt.Font;
 
 public class ExempleDUtilisation {
     
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 	    new ExempleDUtilisation().exemple();
     }
     
@@ -57,5 +57,15 @@ public class ExempleDUtilisation {
 	monBandeau.setMessage("Terminé");
 	monBandeau.sleep(3000);
 	monBandeau.close();
-   }
+   }*/
+    public static void main(String[] args) {
+
+        Bandeau Bandeau1 = new Bandeau();
+        CreerScenario scenario1 = new CreerScenario(Bandeau1);
+        scenario1.ajouterEffet(new Zoomer(4, Bandeau1, "Zoom"));
+        scenario1.ajouterEffet(new Rotation(3, Bandeau1, "Ratation"));
+        scenario1.ajouterEffet(new Clignoter(5, Bandeau1, "Clignotant"));
+        scenario1.afficherScenario();
+
+    }
 }
